@@ -23,7 +23,7 @@ class DIM:
         return self._live_web_server
 
     def _restore_iptables_rules(self, iptables_rules):
-        with open(self.iptables_rules, "r") as iptables_rules_file:
+        with open(iptables_rules, "r") as iptables_rules_file:
             call(["iptables-restore"], stdin=iptables_rules_file)
 
     def _set_wait_times(self, min_wait, max_wait):
