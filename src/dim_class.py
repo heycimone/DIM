@@ -53,10 +53,10 @@ class DIM:
               "--to-destination", "127.0.0.1:" + str(self.local_live_port)])
 
     def _get_new_port(self, next_web_server):
-        if next_web_server == self._NGINX_LABEL:
+        if next_web_server == self._APACHE_LABEL:
             next_port = self.APACHE_PORT
             self.local_old_port = self.NGINX_PORT
-        elif next_web_server == self._APACHE_LABEL:
+        elif next_web_server == self._NGINX_LABEL:
             next_port = self.NGINX_PORT
             self.local_old_port = self.APACHE_PORT
         return next_port
